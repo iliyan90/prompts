@@ -1,0 +1,19 @@
+.hire{
+    margin: auto;
+    overflow: hidden;
+}
+
+@media (max-width: 1060px){
+    .right-hero{
+        display: grid !important;
+        grid-template-columns: repeat(4,1fr) !important;
+        flex-direction: unset !important;
+    }
+}
+@media (max-width: 1000px){
+    .right-hero{
+        display: none !important;
+        grid-template-columns: repeat(4,1fr) !important;
+        flex-direction: unset !important;
+    }
+}

@@ -1,0 +1,51 @@
+.modal-active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColorLight);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    z-index: 400;
+}
+.modal{
+    display: none;
+}
+.inners{
+    display: flex;
+    align-self: center;
+    text-align: center;
+    flex-direction: column;
+}
+.modal-active h3{
+    width: max-content;
+}
+.modal-active h4{
+    width: max-content;
+}
+
+.footer button{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: var(--bgColorLight);
+    color: var(--bgColorW);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.footer button:hover{
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: var(--whiteCol);
+    color: var(--bgColorLight);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+

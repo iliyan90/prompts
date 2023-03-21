@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Finlandica';
+  src: url(../public/Finlandica/Finlandica-VariableFont_wght.ttf) format(truetype);
+}
+:root{
+  --textColorD: #333;
+  --whiteCol: #fff;
+  --butPadd: 5px 20px;
+  --bgColorDark: #222236;
+  --bgColorDarker: #000;
+  --bgColorLight: #454566;
+  --bgColorMiddle: #1f1f2e;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Finlandica', sans-serif;
+  background-color: var(--bgColorDark);
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--bgColorDarker);
+}
+::-webkit-scrollbar-track{
+  background-color: var(--bgColorMiddle);
+}
+
+.textG{
+  filter: invert(48%);
+}
+.textW{
+  color: var(--whiteCol);
+}
+.textLG{
+  color: lightgrey;
+}
+.bgLight{
+  background-color: var(--bgColorLight);
+}
+.bgDark{
+  background-color: var(--bgColorDark);
+}
+
+/* reusable buttons  */
+
+.btn-white{
+  background-color: var(--whiteCol);
+  color: var(--bgColorDark);
+  padding: 10px 30px !important
+  ;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-dark{
+  background-color: transparent;
+  color: var(--whiteCol);
+  border: 1px solid var(--whiteCol);
+  padding: 10px 30px;
+  font-size: 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+@media (max-width: 680px){
+  .btn-white{
+    background-color: var(--whiteCol);
+    color: var(--bgColorDark);
+    padding: 10px 30px !important;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-dark{
+    background-color: transparent;
+    color: var(--whiteCol);
+    border: 1px solid var(--whiteCol);
+    padding: 10px 30px;
+    font-size: 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    
+  } 
+}

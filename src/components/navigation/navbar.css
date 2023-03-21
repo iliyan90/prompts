@@ -1,0 +1,122 @@
+@import '../../index.css';
+
+.logo{
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.input-navbar{
+    width: 80%;
+    outline: none;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+.input-navbar::placeholder{
+    color: lightgrey;
+}
+.srch-button{
+    border-left: none;
+    border-radius: 0 5px 5px 0;
+}
+
+.active{
+    padding: 10px !important;
+    border-radius: 50px !important;
+    background-color: #fff !important;
+    color: #222236 !important;
+    transition: all 0.5s ease !important;
+}
+.drop-down{
+    position: absolute;
+    top: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--bgColorDark);
+    border-radius: 10px;
+    border: 1px solid var(--bgColorLight);
+    overflow: hidden;
+    z-index: 2;
+}
+.drop-button{
+    text-align: start;
+    color: var(--whiteCol);
+    background: transparent;
+    border: none;
+    padding: 10px ;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease !important;
+    width: 100%;
+}
+
+.drop-button:hover{
+    background-color: var(--bgColorLight);
+
+}
+.mobile-hamburger{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    .navbar{
+        overflow-x: hidden !important;
+        width: 100vw;
+    }
+    .prompt-text-logo{
+        display: none;
+    }
+    .navbar-menu{
+        display: none !important;
+    }
+    .mobile-hamburger{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        height: 40px;
+        padding: 5px;
+    }
+    .hamburger > div{
+        width: 40px;
+        padding: 2px;
+        background-color: var(--whiteCol);
+    }
+    .mob-nav-btn{
+        width: 100vw;        
+        padding:20px;
+    }
+    .mobile-slide-menu-active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 20;
+        background-color: var(--bgColorDark);
+        transform: translateX(0);
+        transition: All 0.5s ease ;
+    }
+    .mobile-slide-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 20;
+        background-color: var(--bgColorDark);
+        transform: translateX(100%);
+        transition: All 0.5s ease ;
+    }
+    .mob-nav-btn .btn-dark{
+        border: none;
+    }
+}
+
+

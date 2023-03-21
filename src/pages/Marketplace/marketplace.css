@@ -1,0 +1,145 @@
+/* Hide the checkbox input */
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Style the label to look like a checkbox */
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Create the checkbox shape */
+  label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border: none;
+    background-color: var(--bgColorLight);
+
+  }
+  
+  /* Add a checkmark when the checkbox is checked */
+  input[type="checkbox"]:checked + label::before {
+    content: "\2713";
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--bgColorDark);
+    background-color: var(--whiteCol);
+  }
+  
+  .btn-filter{
+    color: var(--whiteCol);
+    border-radius: 7px;
+    border: 1px solid var(--whiteCol);
+    background-color: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+    min-width: 120px !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .right-side-marketplace-items{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    gap: 20px;
+  }
+  .select-mobile-items{
+    display: none;
+  }
+
+  @media (max-width: 1000px){
+    .left-side-marketplace{
+      display: flex ;
+      align-items: center;
+      flex-direction: row !important;
+      justify-content: flex-start !important;
+      gap: 10px ;
+      width: 100% !important;
+      overflow-x: scroll !important;
+      padding: 5px !important;
+    }
+    .right-side-marketplace-items{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 120px);
+      gap: 20px;
+    }
+    .marketplace{
+      display: flex;
+      flex-direction: column;
+    }
+    .market-list-items{
+      display: none;
+    }
+    .left-side-marketplace{
+      display: flex ;
+      flex-direction: row;
+      align-items: center;
+      gap: 30px;
+    }
+    .select-mobile-items{
+      display: flex;
+      background-color: var(--bgColorLight);
+      color: var(--whiteCol);
+      padding: 2px 5px;
+    }
+    .right-side-marketplace{
+      flex: none;
+      width: 80%;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+@media (max-width: 680px){
+  .left-side-marketplace{
+    display: flex ;
+    align-items: center;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 10px ;
+    width: 100% !important;
+    overflow-x: scroll !important;
+    padding: 5px !important;
+  }
+
+  .left-side-marketplace::-webkit-scrollbar{
+    display: none;
+  }
+  .select-mobile-items{
+    display: flex !important;
+    overflow-x: hidden !important ;
+    padding: 5px;
+  }
+
+  .btn-filter{
+    color: var(--whiteCol);
+    border-radius: 7px;
+    border: 1px solid var(--whiteCol);
+    background-color: transparent;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center !important;
+    flex-direction: row !important;
+    width: 120px !important;
+    gap: 5px;
+  }
+
+  .right-side-marketplace-items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+  

@@ -1,0 +1,9 @@
+.generate-right-side{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.generate{
+    margin: auto;
+    padding: 20px;
+}
